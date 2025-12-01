@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code2, Rocket, Cpu, Zap } from 'lucide-react';
+import { Code2, Rocket, Cpu } from 'lucide-react';
 import { Card } from './ui/Card';
 
 const features = [

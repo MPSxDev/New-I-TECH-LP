@@ -1,10 +1,3 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './style.css'
-import App from './App.tsx'
-
-createRoot(document.getElementById('app')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// This file exists only to satisfy tooling that expects a `main.ts` entry.
+// The actual React entry point is implemented in `main.tsx`.
+import './main.tsx'
