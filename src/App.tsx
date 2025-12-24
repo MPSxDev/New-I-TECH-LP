@@ -13,7 +13,7 @@ import { Footer } from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-bg text-white">
+    <div className="min-h-screen text-white" style={{ background: '#05050A' }}>
       <Navbar />
       <main>
         <Hero />

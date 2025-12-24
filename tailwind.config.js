@@ -49,8 +49,9 @@ export default {
         // Custom I-TECH colors
         "electric-blue": "#00d4ff",
         "neon-purple": "#9333ea",
-        "dark-bg": "#0a0a0a",
-        "dark-card": "#1a1a1a",
+        "dark-bg": "#05050A",
+        "dark-card": "#0F1016",
+        "card-bg": "#0F1016",
         "dark-muted": "#2a2a2a",
         "surface-neutral": "rgba(26, 26, 26, 0.6)",
         "border-muted": "rgba(255, 255, 255, 0.1)",

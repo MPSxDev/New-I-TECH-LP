@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Instagram, Github, Mail } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const footerLinks = {
   servicios: [
@@ -37,8 +37,8 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-dark-card border-t border-white/10 relative">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+    <footer className="bg-dark-bg border-t border-white/10 relative">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16 mb-16">
           {/* Brand Section */}
           <div className="lg:col-span-2">
@@ -49,7 +49,7 @@ export function Footer() {
                 className="h-6 sm:h-8 w-auto"
               />
             </div>
-            <p className="text-muted-foreground mb-8 max-w-md leading-relaxed text-base">
+            <p className="text-white/70 mb-8 max-w-md leading-relaxed text-base">
               Construimos el futuro digital de tu empresa. Software factory especializada en
               soluciones tecnológicas empresariales que transforman negocios.
             </p>
@@ -63,7 +63,7 @@ export function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl glass-strong border border-white/10 flex items-center justify-center text-muted-foreground hover:text-electric-blue hover:border-electric-blue/50 transition-all duration-300 hover:scale-110 hover:shadow-elevated"
+                    className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:border-white/20 transition-all duration-200"
                     aria-label={social.label}
                   >
                     <Icon className="w-5 h-5" />
@@ -75,8 +75,8 @@ export function Footer() {
 
           {/* Servicios */}
           <div>
-            <h4 className="text-lg font-bold text-white mb-6 uppercase tracking-wider">Servicios</h4>
-            <ul className="space-y-4">
+            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Servicios</h4>
+            <ul className="space-y-3">
               {footerLinks.servicios.map((link, index) => (
                 <li key={index}>
                   <a
@@ -85,7 +85,7 @@ export function Footer() {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-muted-foreground hover:text-electric-blue transition-colors duration-300 text-base block"
+                    className="text-white/70 hover:text-white transition-colors duration-200 text-sm block"
                   >
                     {link.label}
                   </a>
@@ -96,8 +96,8 @@ export function Footer() {
 
           {/* Empresa */}
           <div>
-            <h4 className="text-lg font-bold text-white mb-6 uppercase tracking-wider">Empresa</h4>
-            <ul className="space-y-4">
+            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Empresa</h4>
+            <ul className="space-y-3">
               {footerLinks.empresa.map((link, index) => (
                 <li key={index}>
                   <a
@@ -106,7 +106,7 @@ export function Footer() {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-muted-foreground hover:text-electric-blue transition-colors duration-300 text-base block"
+                    className="text-white/70 hover:text-white transition-colors duration-200 text-sm block"
                   >
                     {link.label}
                   </a>
@@ -117,8 +117,8 @@ export function Footer() {
 
           {/* Contacto */}
           <div>
-            <h4 className="text-lg font-bold text-white mb-6 uppercase tracking-wider">Contacto</h4>
-            <ul className="space-y-4">
+            <h4 className="text-sm font-semibold text-white mb-6 uppercase tracking-wider">Contacto</h4>
+            <ul className="space-y-3">
               {footerLinks.contacto.map((link, index) => (
                 <li key={index}>
                   <a
@@ -129,7 +129,7 @@ export function Footer() {
                         scrollToSection(link.href);
                       }
                     }}
-                    className="text-muted-foreground hover:text-electric-blue transition-colors duration-300 text-base block"
+                    className="text-white/70 hover:text-white transition-colors duration-200 text-sm block"
                   >
                     {link.label}
                   </a>
@@ -141,18 +141,9 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-white/70">
             © {new Date().getFullYear()} I-TECH. Todos los derechos reservados.
           </p>
-          <div className="flex items-center gap-2 text-sm text-muted-foreground">
-            <Mail className="w-4 h-4" />
-            <a
-              href="mailto:contacto@i-tech.com"
-              className="hover:text-electric-blue transition-colors duration-300"
-            >
-              contacto@i-tech.com
-            </a>
-          </div>
         </div>
       </div>
     </footer>

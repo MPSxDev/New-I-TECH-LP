@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
 import { cn } from '@/lib/utils';
@@ -36,13 +36,13 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-dark-bg/90 backdrop-blur-xl border-b border-white/10 py-4 shadow-elevated'
+          ? 'bg-white/5 backdrop-blur-md py-4'
           : 'bg-transparent py-6'
       )}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
@@ -52,19 +52,19 @@ export function Navbar() {
                 e.preventDefault();
                 handleNavClick('#hero');
               }}
-              className="flex items-center hover:opacity-80 transition-opacity duration-300 group"
+              className="flex items-center hover:opacity-80 transition-opacity duration-300"
             >
               <img
                 src="/i-tech.svg"
                 alt="I-TECH Logo"
-                className="h-6 sm:h-8 w-auto group-hover:scale-105 transition-transform duration-300"
+                className="h-6 sm:h-8 w-auto"
               />
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-10">
-            {navItems.map((item) => (
+          <div className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+            {navItems.slice(0, 3).map((item) => (
               <a
                 key={item.href}
                 href={item.href}
@@ -72,21 +72,22 @@ export function Navbar() {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className="text-muted-foreground hover:text-electric-blue transition-colors duration-300 font-semibold text-sm uppercase tracking-wider relative group"
+                className="text-white/90 hover:text-white transition-colors duration-200 font-medium text-sm"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-electric-blue group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
-            <Button
+          </div>
+
+          {/* Right side - Login button style */}
+          <div className="hidden md:flex items-center">
+            <button
               onClick={() => handleNavClick('#contacto')}
-              variant="primary"
-              size="sm"
-              glow
-              className="ml-4"
+              className="px-5 py-2.5 rounded-lg bg-[#00d4ff] text-[#0a0a0a] font-semibold text-sm hover:bg-[#00b8e6] transition-colors duration-200 inline-flex items-center gap-2"
             >
               Conversemos
-            </Button>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -115,7 +116,7 @@ export function Navbar() {
                   e.preventDefault();
                   handleNavClick(item.href);
                 }}
-                className="block text-muted-foreground hover:text-electric-blue transition-colors duration-300 font-semibold text-base py-2"
+                className="block text-white/90 hover:text-white transition-colors duration-200 font-medium text-base py-2"
               >
                 {item.label}
               </a>
