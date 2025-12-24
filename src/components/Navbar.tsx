@@ -83,7 +83,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center">
             <button
               onClick={() => handleNavClick('#contacto')}
-              className="px-5 py-2.5 rounded-lg bg-[#00d4ff] text-[#0a0a0a] font-semibold text-sm hover:bg-[#00b8e6] transition-colors duration-200 inline-flex items-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-[#00d4ff] via-[#00a8cc] to-[#0088aa] text-white text-sm font-semibold uppercase tracking-wide rounded-full shadow-[0_22px_55px_-20px_rgba(0,212,255,0.85)] transition-all duration-200 hover:brightness-110 hover:shadow-[0_25px_60px_-15px_rgba(0,212,255,0.95)] inline-flex items-center gap-2"
             >
               Conversemos
               <ArrowRight className="w-4 h-4" />

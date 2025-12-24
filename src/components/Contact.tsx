@@ -91,7 +91,7 @@ export function Contact() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
                   type="submit"
-                  className="flex-1 px-6 py-4 rounded-lg bg-[#00d4ff] text-[#0a0a0a] font-semibold text-base hover:bg-[#00b8e6] transition-colors duration-200 inline-flex items-center justify-center gap-2"
+                  className="flex-1 px-8 py-4 bg-gradient-to-r from-[#00d4ff] via-[#00a8cc] to-[#0088aa] text-white text-sm font-semibold uppercase tracking-wide rounded-full shadow-[0_22px_55px_-20px_rgba(0,212,255,0.85)] transition-all duration-200 hover:brightness-110 hover:shadow-[0_25px_60px_-15px_rgba(0,212,255,0.95)] inline-flex items-center justify-center gap-2"
                 >
                   Enviar mensaje
                   <Send className="w-5 h-5" />
@@ -100,7 +100,7 @@ export function Contact() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-4 rounded-lg border-2 border-white/20 text-white font-semibold text-base hover:border-white/40 hover:bg-white/5 transition-all duration-200 inline-flex items-center justify-center gap-2"
+                  className="px-6 py-4 rounded-full border-2 border-white/20 text-white font-semibold text-base hover:border-white/40 hover:bg-white/5 transition-all duration-200 inline-flex items-center justify-center gap-2"
                 >
                   WhatsApp
                   <MessageCircle className="w-5 h-5" />

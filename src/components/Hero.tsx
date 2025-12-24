@@ -313,7 +313,7 @@ export function Hero() {
           >
             <button
               onClick={scrollToContact}
-              className="px-8 py-4 rounded-lg bg-gradient-to-r from-[#00d4ff] to-[#9333ea] text-white font-semibold text-base hover:opacity-90 transition-opacity duration-200 inline-flex items-center gap-2 min-w-[240px] justify-center"
+              className="px-8 py-4 bg-gradient-to-r from-[#00d4ff] via-[#00a8cc] to-[#0088aa] text-white text-sm font-semibold uppercase tracking-wide rounded-full shadow-[0_22px_55px_-20px_rgba(0,212,255,0.85)] transition-all duration-200 hover:brightness-110 hover:shadow-[0_25px_60px_-15px_rgba(0,212,255,0.95)] inline-flex items-center gap-2 min-w-[240px] justify-center"
             >
               Conversemos sobre tu proyecto
               <ArrowRight className="w-5 h-5" />
@@ -323,7 +323,7 @@ export function Hero() {
                 const element = document.querySelector('#servicios');
                 element?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-8 py-4 rounded-lg border-2 border-white/20 text-white font-semibold text-base hover:border-white/40 hover:bg-white/5 transition-all duration-200 min-w-[240px]"
+              className="px-8 py-4 rounded-full border-2 border-white/20 text-white font-semibold text-base hover:border-white/40 hover:bg-white/5 transition-all duration-200 min-w-[240px]"
             >
               Ver servicios
             </button>
